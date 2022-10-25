@@ -6,6 +6,20 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>김세영의 홈페이지</title>
         <link rel="stylesheet" href="./style.css" type="text/css">
+
+        <script type="text/javascript">
+            function doSomething(){
+                let a = document.getElementById('inputA').value;
+                let b = document.getElementById('inputB').value;
+                document.getElementById("valueA").innerHTML = a;
+                document.getElementById("valueB").innerHTml = b;
+                document.getElementById("valueC").innerHTML = Number(a) + Number(b);
+            }
+
+            function whatTimeIsIt(){
+                alert(new Date());
+            }
+        </script>
     </head>
     <body>
         <nav>
@@ -19,7 +33,16 @@
         <h3>세 번째 크기의 헤드라인</h3>
         <h4>네 번째 크기의 헤드라인</h4>
         <h5>다섯 번째 크기 헤드라인</h5>
-        <p>문단은 p로 쓰세요. p는 아마도 Paragraph의 앞글자를 따온 것이겠죠?</p>
+
+        <button onclick="whatTimeIsIt()">현재 시간</button>
+        <hr/>
+
+        <label for="inputA">a</label>
+        <input id="inputA" value=1 onkeyup="doSomething()">
+        <label for="inputB">b</label>
+        <input id="inputB" value=2 onkeyup="doSomething()">
+
+        <p><span id="valueA">1</span> + <span id="valueB">2</span> = <span id="valueC">3</span>입니다.</p>
         <a href="https://www.google.com">Go to google</a>
         <hr/>
         <img src="https://cdn.pixabay.com/photo/2018/05/13/16/57/dog-3397110__480.jpg" width="600px"/>
